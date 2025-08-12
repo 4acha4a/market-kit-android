@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    namespace 'io.horizontalsystems.marketkit'
+    namespace 'io.gesundbrunnen.marketkit'
     compileSdk 34
 
     defaultConfig {
@@ -67,7 +67,7 @@ project.afterEvaluate {
         publications {
             release(MavenPublication) {
                 from components.release
-                groupId = 'com.github.horizontalsystems'
+                groupId = 'com.github.4acha4a'
                 artifactId = 'market-kit-android'
                 version = '1.0.0'
             }
