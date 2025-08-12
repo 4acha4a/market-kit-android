@@ -937,6 +937,7 @@ INSERT INTO BlockchainEntity VALUES('hondaiscoin','HondaisCoin',null);
 INSERT INTO BlockchainEntity VALUES('bitwin24','Bitwin24',null);
 INSERT INTO BlockchainEntity VALUES('hupayx','HUPAYX',null);
 INSERT INTO BlockchainEntity VALUES('nexus','Nexus',null);
+INSERT INTO BlockchainEntity VALUES('nexus-testnet-iii','Nexus Testnet III',null);
 INSERT INTO BlockchainEntity VALUES('lightforge','Lightforge',null);
 INSERT INTO BlockchainEntity VALUES('florin','Florin',null);
 INSERT INTO BlockchainEntity VALUES('citadel','Citadel',null);
@@ -9141,6 +9142,7 @@ INSERT INTO TokenEntity VALUES('wayfinder','base','eip20',18,'0x30c7235866872213
 INSERT INTO TokenEntity VALUES('wayfinder','ethereum','eip20',18,'0x28d38df637db75533bd3f71426f3410a82041544');
 INSERT INTO TokenEntity VALUES('slove','sui','sui',6,'0x6dd439dee053557b3dd340287a4b81099b3e729cb48fbdae726dd2dff82736c3::slove::SLOVE');
 INSERT INTO TokenEntity VALUES('nexusmind','binance-smart-chain','eip20',18,'0xa67ed14c65e7b717674f0d66570c13e77583a68f');
+INSERT INTO TokenEntity VALUES('nexus-testnet-iii-coin','nexus-testnet-iii','native',18,'');
 INSERT INTO TokenEntity VALUES('game-bee','binance-smart-chain','eip20',18,'0xe6cf62bf8bc5bdb05be4dd9c57f8899df3741226');
 INSERT INTO TokenEntity VALUES('icecream-ai','binance-smart-chain','eip20',18,'0xd438b82543fb109f34575c825edaeefc98f1f2b4');
 INSERT INTO TokenEntity VALUES('action-figure','solana','spl',6,'7LSsEoJGhLeZzGvDofTdNg7M3JttxQqGWNLo6vWMpump');
@@ -11636,6 +11638,7 @@ INSERT INTO Coin VALUES('neutrino-system-base-token','Neutrino System Base Token
 INSERT INTO Coin VALUES('o3-swap','O3 Swap','O3',7988,'o3-swap','https://assets.coingecko.com/coins/images/15460/large/o3.png');
 INSERT INTO Coin VALUES('nftb','NFTb','NFTB',5632,'nftb','https://assets.coingecko.com/coins/images/15484/large/logo-pixelrealm-symbol.png');
 INSERT INTO Coin VALUES('nexus','Nexus','NXS',3367,'nexus','https://assets.coingecko.com/coins/images/576/large/nexus-logo.png');
+INSERT INTO Coin VALUES('nexus-testnet-iii-coin','Nexus Token (NEX)','NEX',3940,'nexus-testnet-iii','https://pbs.twimg.com/profile_images/1887351274955546627/jlvN83vR_400x400.jpg');
 INSERT INTO Coin VALUES('nominex','Nominex','NMX',4878,'nominex','https://assets.coingecko.com/coins/images/14424/large/NMX_c_200px.png');
 INSERT INTO Coin VALUES('nuls','Nuls','NULS',3316,'nuls','https://assets.coingecko.com/coins/images/1053/large/2021_NULS_ICON_Tra-01.png');
 INSERT INTO Coin VALUES('nftx','NFTX','NFTX',1832,'nftx','https://assets.coingecko.com/coins/images/13574/large/NFTX_%28Real%29.jpg');
