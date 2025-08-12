@@ -65,7 +65,7 @@ sealed class BlockchainType : Parcelable {
     object Stellar: BlockchainType()
 
     @Parcelize
-    object Nexus : BlockchainType()
+    object NexusTestnetIII : BlockchainType()
 
     @Parcelize
     class Unsupported(val _uid: String) : BlockchainType()
@@ -92,7 +92,7 @@ sealed class BlockchainType : Parcelable {
             is Base -> "base"
             is ZkSync -> "zksync"
             is Stellar -> "stellar"
-            is Nexus -> "nexus"
+            is NexusTestnetIII -> "nexus-testnet-iii"
             is Unsupported -> this._uid
         }
 
@@ -125,7 +125,7 @@ sealed class BlockchainType : Parcelable {
         Base -> "base"
         ZkSync -> "zksync"
         Stellar -> "stellar"
-        Nexus -> "nexus"
+        NexusTestnetIII -> "nexus-testnet-iii"
         is Unsupported -> "unsupported|$uid"
     }
 
@@ -153,7 +153,7 @@ sealed class BlockchainType : Parcelable {
                 "base" -> Base
                 "zksync" -> ZkSync
                 "stellar" -> Stellar
-                "nexus" -> Nexus
+                "nexus-testnet-iii" -> NexusTestnetIII
                 else -> Unsupported(uid)
             }
 
