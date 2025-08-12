@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    namespace 'io.gesundbrunnen.marketkit'
+    namespace 'io.horizontalsystems.marketkit'
     compileSdk 34
 
     defaultConfig {
