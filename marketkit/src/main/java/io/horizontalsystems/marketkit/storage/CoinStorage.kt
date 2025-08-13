@@ -147,9 +147,9 @@ class CoinStorage(val marketDatabase: MarketDatabase) {
 
     fun update(coins: List<Coin>, blockchainEntities: List<BlockchainEntity>, tokenEntities: List<TokenEntity>) {
         marketDatabase.runInTransaction {
-            coinDao.deleteAllCoins()
-            coinDao.deleteAllBlockchains()
-            coinDao.deleteAllTokens()
+//            coinDao.deleteAllCoins()
+//            coinDao.deleteAllBlockchains()
+//            coinDao.deleteAllTokens()
             coins.forEach { coinDao.insert(it) }
             blockchainEntities.forEach { coinDao.insert(it) }
             tokenEntities.forEach { coinDao.insert(it) }
