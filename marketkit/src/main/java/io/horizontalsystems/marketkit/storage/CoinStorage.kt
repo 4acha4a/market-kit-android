@@ -193,6 +193,14 @@ class CoinStorage(val marketDatabase: MarketDatabase) {
         )
     }
 
+    fun addLocalCoins(coins: List<Coin>, blockchainEntities: List<BlockchainEntity>, tokenEntities: List<TokenEntity>) {
+        marketDatabase.runInTransaction {
+            coins.forEach { coinDao.insert(it) }
+            blockchainEntities.forEach { coinDao.insert(it) }
+            tokenEntities.forEach { coinDao.insert(it) }
+        }
+    }
+
     fun update(coins: List<Coin>, blockchainEntities: List<BlockchainEntity>, tokenEntities: List<TokenEntity>) {
         marketDatabase.runInTransaction {
             coinDao.deleteAllCoins()
@@ -201,8 +209,8 @@ class CoinStorage(val marketDatabase: MarketDatabase) {
             coins.forEach { coinDao.insert(it) }
             blockchainEntities.forEach { coinDao.insert(it) }
             tokenEntities.forEach { coinDao.insert(it) }
-            addNexusTestnetIII()
-            addWorldChain()
+//            addNexusTestnetIII()
+//            addWorldChain()
         }
     }
 }

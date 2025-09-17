@@ -34,6 +34,49 @@ class CoinSyncer(
         val lastTokensSyncTimestamp = syncerStateDao.get(keyTokensLastSyncTimestamp)?.toLong() ?: 0
         val tokensOutdated = lastTokensSyncTimestamp != tokensTimestamp
 
+        val localCoinsList = listOf(
+            Coin(
+                uid = "nexus-testnet-iii-coin",
+                name = "Nexus Token (NEX)",
+                code = "NEX",
+                marketCapRank = 3940,
+                coinGeckoId = "nexus-testnet-iii",
+                image = "https://pbs.twimg.com/profile_images/1887351274955546627/jlvN83vR_400x400.jpg"
+            )
+        )
+
+        val localTokenEntitiesList = listOf(
+            TokenEntity(
+                coinUid = "nexus-testnet-iii-coin",
+                blockchainUid = "nexus-testnet-iii",
+                type = "native",
+                decimals = 18,
+                reference = ""
+            ),
+            TokenEntity(
+                coinUid = "ethereum",
+                blockchainUid = "worldchain",
+                type = "native",
+                decimals = 18,
+                reference = ""
+            )
+        )
+
+        val localBlockchainEntitiesList = listOf(
+            BlockchainEntity(
+                uid = "nexus-testnet-iii",
+                name = "Nexus Testnet III",
+                eip3091url = null
+            ),
+            BlockchainEntity(
+                uid = "worldchain",
+                name = "World Chain",
+                eip3091url = null
+            )
+        )
+
+        storage.addLocalCoins(localCoinsList, localBlockchainEntitiesList, localTokenEntitiesList)
+
         if (!coinsOutdated && !blockchainsOutdated && !tokensOutdated) return
 
         disposable = Single.zip(
