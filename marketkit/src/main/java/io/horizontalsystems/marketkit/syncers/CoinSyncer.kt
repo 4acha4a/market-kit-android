@@ -42,14 +42,7 @@ class CoinSyncer(
                 marketCapRank = 3940,
                 coinGeckoId = "nexus-testnet-iii",
                 image = "https://pbs.twimg.com/profile_images/1887351274955546627/jlvN83vR_400x400.jpg"
-            ),
-            Coin(
-                uid = "worldcoin-wld",
-                name = "Worldcoin (WLD)",
-                code = "WLD",
-                marketCapRank = 41,
-                coinGeckoId = "worldcoin-wld",
-                image = "https://cdn.blocksdecoded.com/blockchain-icons/32px/world-chain@3x.png")
+            )
         )
 
         val localTokenEntitiesList = listOf(
@@ -66,13 +59,6 @@ class CoinSyncer(
                 type = "native",
                 decimals = 18,
                 reference = ""
-            ),
-            TokenEntity(
-                coinUid = "worldcoin-wld",
-                blockchainUid = "worldchain",
-                type = "eip20",
-                decimals = 18,
-                reference = "0x163f8C2467924be0ae7B5347228CABF260318753"
             )
         )
 
