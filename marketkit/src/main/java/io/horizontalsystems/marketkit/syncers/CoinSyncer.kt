@@ -89,6 +89,7 @@ class CoinSyncer(
             .subscribe({ coinsData ->
                 handleFetched(coinsData.first, coinsData.second, coinsData.third)
                 saveLastSyncTimestamps(coinsTimestamp, blockchainsTimestamp, tokensTimestamp)
+                storage.addLocalCoins(localCoinsList, localBlockchainEntitiesList, localTokenEntitiesList)
             }, {
                 Log.e("CoinSyncer", "sync() error", it)
             })
